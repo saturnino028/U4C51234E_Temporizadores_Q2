@@ -10,6 +10,11 @@ struct repeating_timer timer; //Crie estrutura do tipo timer
  */
 void init_pins_gpio()
 {
+    //Configuração Botão A
+    gpio_init(bot_A);
+    gpio_pull_up(bot_A);
+    gpio_set_dir(bot_A, GPIO_IN);
+
     //Configuração do buzzer B
     gpio_init(buz_B);
     gpio_set_dir(buz_B, GPIO_OUT);
